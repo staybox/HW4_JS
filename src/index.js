@@ -99,6 +99,7 @@ function findError(where) {
    должно быть преобразовано в <div></div><p></p>
  */
 function deleteTextNodes(where) {
+    // Альтернативное решение (проход циклом от 0 до конца дерева)
     /*let arr = [];
     for(let i=0;i<where.childNodes.length;i++){
         if(where.childNodes[i].innerText) {
