@@ -109,7 +109,6 @@ function deleteTextNodes(where) {
     return arr;*/
 }
     function deleteTextNodes(where) {
-
         for(let i=where.childNodes.length - 1;i >= 0;i--){
             console.log(where.childNodes[i]);
             if(where.childNodes[i].nodeType == 3){
@@ -130,6 +129,7 @@ function deleteTextNodes(where) {
    должно быть преобразовано в <span><div><b></b></div><p></p></span>
  */
 function deleteTextNodesRecursive(where) {
+    // Лучше всегда использовать проход снизу вверх т.к. если использовать сверху вниз то будет сдвиг элементов и проход будет не полноценным
     for(let i=where.childNodes.length - 1;i >= 0;i--){
         //console.log(where.childNodes[i]);
         if(where.childNodes[i].nodeType == 3){
