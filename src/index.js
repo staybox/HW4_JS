@@ -12,9 +12,9 @@
  */
 function createDivWithText(text) {
    let div = document.createElement('div');
-   div.innerHTML = text;
-   let appendOnPage = document.body.appendChild(div);
-   return appendOnPage;
+   let insertText = div.innerHTML = text;
+   //let appendOnPage = document.body.appendChild(div);
+   return insertText;
 }
 
 /*
@@ -27,7 +27,6 @@ function createDivWithText(text) {
  */
 function prepend(what, where) {
     let parse = where.insertBefore(what, where.firstChild);
-    return parse;
 }
 
 /*
